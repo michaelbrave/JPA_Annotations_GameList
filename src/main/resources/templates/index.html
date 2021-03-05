@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Game List | Games</title>
+</head>
+<body>
+    <h1>A simple list of games</h1>
+    <h3>it will do the job, though it's nothing fancy</h3>
+
+    <form action="#" th:action="@{/}" th:object="${game}" method="post">
+        <input type="text" placeholder="Game Name" th:field="*{gameName}" />
+        <input type="text" placeholder="Genre" th:field="*{genre}"/>
+        <input type="text" placeholder="1995" th:field="*{yearReleased}"/>
+        <button type="submit">Add Game</button>
+    </form>
+</body>
+</html>
